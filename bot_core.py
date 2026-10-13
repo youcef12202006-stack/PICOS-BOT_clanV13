@@ -941,6 +941,7 @@ async def TcPChaT(ip, port, AutHToKen, key, iv, ready_event, region, reconnect_d
                     h3 = f"""[b][c]{get_random_color()} ═══ BOT COMMANDS (3/4) ═══
 [b][c][FFFF00]❤️ FUN:
 [b][c][FFFFFF]/love <name> [00FF00]→ Love messages
+[b][c][FFFFFF]/mth <expr> [00FF00]→ Calculator
 [b][c][FFFFFF]/gali <name> [00FF00]→ Gaali spam
 [b][c][FFFFFF]/rt <name> [00FF00]→ Roast
 [b][c][FFFFFF]/praisa <name> [00FF00]→ Praise
@@ -1839,7 +1840,7 @@ f"💎 {name} You will receive a priceless gift!",
                 # ═══════════════════════════════════════════════
                 elif inPuTMsG.strip().startswith('/mth'):
                     parts = inPuTMsG.strip().split(maxsplit=1)
-                    if len(parts) < 2:
+                    if len(parts) < 6:
                         await safe_send_message(XX, f"[B][C][FFFF00]Usage: /mth 2+2  or  5*3  or  10/2", uid, chat_id, key, iv)
                     else:
                         expr = parts[1].strip().replace("×", "*").replace("÷", "/").replace("x", "*")
